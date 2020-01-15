@@ -9,6 +9,10 @@ function getfield(features, field) {
     return features.map(function(feature) {return feature.properties[field];});
 }
 
+function getlon(features) {
+    return features.map(function(feature) {return feature.geometry.coordinates[0];});
+}
+
 function gettemblores() {
     var today = Date.now();
     var begin_date = "2019-12-21";
@@ -19,6 +23,7 @@ function gettemblores() {
 
     d3.json(url).then(function(geojson) {
 	      var magnitudes = getfield(geojson.features, "mag");
+        var longitudes = getlon(geojson.features);
         var times = getfield(geojson.features, "time");
         var dates = times.map(function(d) {return new Date(d)});
 
@@ -33,16 +38,32 @@ function gettemblores() {
         };
 
         var layout = {
-            title: 'Magnitudes of recent earthquakes in southwest Puerto Rico',
+            title: "Magnitudes of " + magnitudes.length + " recent earthquakes in southwest Puerto Rico",
             yaxis: {
                 title: 'Magnitude'
             }
         };
 
         Plotly.newPlot('Temblores', [intensity], layout);
-        
-        //var data = d3.json(string);
-        //console.log(data);
+
+        var location = {
+            type: "scatter",
+            mode: "markers",
+            x: dates,
+            y: longitudes,
+            marker: {
+                size: magnitudes.map(function(x) {return x*2; })
+            }
+        };
+
+        var layout2 = {
+            title: "Longitudes (east/west) of " + longitudes.length + " recent earthquakes in southwest Puerto Rico",
+            yaxis: {
+                title: "Degrees longitude"
+            }
+        };
+
+        Plotly.newPlot('Longitude', [location], layout2);
     })
 }
 
