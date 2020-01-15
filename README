@@ -1,0 +1,23 @@
+Rafa Arce suggested plotting intensity vs time for recent earthquakes.
+
+USGS has an API:
+
+https://earthquake.usgs.gov/fdsnws/event/1/
+
+Here's a query:
+
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2020-01-01&latitude=17.949&longitude=-66.851&maxradiuskm=50
+
+for a 50 km radius around Guanica.
+
+The features have a "mag" and a "time".
+
+He and I have worked on a google collab notebook
+
+https://colab.research.google.com/drive/1-6dKcQhPBkrsK8tHKhp5k-saX6ZboUKe?fbclid=IwAR0GIZmWf_bqxbWdjRYkTnlu9GOOPfY8QuvXI67fRcyhz8vqcEJgQTedObs
+
+https://colab.research.google.com/drive/1pkqqWc_MhuDbDP7OpVE33JU4BKTfQGbL#scrollTo=1s-VJki-d3dt
+
+Rolando Acosta published a github repo with R code:
+
+https://github.com/RJNunez/twitter-vizs
