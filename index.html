@@ -1,8 +1,29 @@
 <!doctype html>
 <html>
-<head>
+    <head>
+        <title>Timeline of 2020 earthquakes in southwest Puerto Rico</title>
 </head>
 <body>
+
+    <h1>Timeline of 2020 earthquakes in southwest Puerto Rico</h1>
+    <h2>Introduction</h2>
+    <p>Puerto Rico had a swarm (or <i>sequence</i>) of earthquakes at the end of
+        2019 and the start of 2020. So far, the largest was a
+        <a href="https://www.usgs.gov/news/magnitude-64-earthquake-puerto-rico"> magnitude 6.4 on January 7, 2020</a>.
+
+        Since around December 28, there have been more than 1000 quakes in the
+        region. Several researchers have made plots of the activity, posting on
+        twitter, facebook and other social media.
+    </p>
+
+    <h2>Methods</h2>
+    <p>Inspired by a <a href="https://twitter.com/RJANunez/status/1216400930624737280">post on twitter by Rolando J Acosta</a>, I set
+    up this page to plot the most recent earthquake magnitudes. It uses pure
+    javascript, using the D3 and Plotly libraries, so no code runs on the
+    server. If you are patient, the plot should appear below shortly.
+    </p>
+
+    <h2>Results</h2>
 
 <script src='lib/d3/d3.min.js'></script>
 <!-- Plotly.js -->
@@ -11,6 +32,12 @@
 
 <!-- Plotly chart will be drawn inside this DIV -->
 <div id="Temblores"></div>
+
+<h2>Availability</h2>
+
+<p>The source code for this application is all available, either on this site,
+or in the github repository. It's all static html and javascript, you don't need
+to run anthing on the server.</p>
 
 </body>
 </html>

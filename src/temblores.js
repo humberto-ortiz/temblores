@@ -33,7 +33,7 @@ function gettemblores() {
         };
 
         var layout = {
-            title: 'Magnitudes of recent earthquakes',
+            title: 'Magnitudes of recent earthquakes in southwest Puerto Rico',
             yaxis: {
                 title: 'Magnitude'
             }
