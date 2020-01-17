@@ -50,6 +50,7 @@ function gettemblores() {
             type: "scatter",
             mode: "markers",
             x: dates,
+            hovertext: magnitudes.map(function(mag) {return "Mag: " + mag}),
             y: longitudes,
             marker: {
                 size: magnitudes.map(function(x) {return x*2; })
