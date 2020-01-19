@@ -38,7 +38,7 @@ function gettemblores() {
         };
 
         var layout = {
-            title: "Magnitudes of " + magnitudes.length + " recent earthquakes in southwest Puerto Rico",
+            title: "Magnitudes of recent earthquakes in southwest Puerto Rico<br><sub>n = " + magnitudes.length + "<br>" + begin_date + " - " + end_date.toISOString().substring(0,10) + "</sub>" ,
             yaxis: {
                 title: 'Magnitude'
             }
@@ -58,7 +58,7 @@ function gettemblores() {
         };
 
         var layout2 = {
-            title: "Longitudes (east/west) of " + longitudes.length + " recent earthquakes in southwest Puerto Rico",
+            title: "Longitudes (east/west) of recent earthquakes in southwest Puerto Rico<br><sub>n = " + longitudes.length + "<br>" + begin_date + " - " + end_date.toISOString().substring(0,10) + "</sub>" ,
             yaxis: {
                 title: "Degrees longitude"
             }
