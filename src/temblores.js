@@ -48,9 +48,6 @@ function gettemblores() {
         };
 
         var layout = {
-<<<<<<< HEAD
-            title: "Magnitudes of " + magnitudes.length + " recent earthquakes in southwest Puerto Rico",
-=======
             title: "Magnitudes of recent earthquakes in southwest Puerto Rico<br><sub>n = " + magnitudes.length + "<br>" + begin_date + " - " + end_date + "</sub>" ,
             yaxis: {
                 title: 'Magnitude'
