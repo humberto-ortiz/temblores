@@ -22,10 +22,9 @@ function getdepth(features) {
 }
 
 function gettemblores() {
-    var today = Date.now();
+    var today = new Date;
     var begin_date = "2019-12-21";
-    var tomorrow = new Date(today + (1000 * 60 * 60 * 8));
-    var end_date = tomorrow.toISOString().substring(0,10);
+    var end_date = today.toISOString();
     var url = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=17.949&longitude=-66.851&maxradiuskm=50&starttime="+begin_date+"&endtime="+end_date;
     //console.log(url);
 
