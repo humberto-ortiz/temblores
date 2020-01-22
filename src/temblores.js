@@ -33,7 +33,6 @@ function gettemblores() {
         var longitudes = getlon(geojson.features);
         var latitudes = getlat(geojson.features);
         var times = getfield(geojson.features, "time");
-        var depths = getdepth(geojson.features).map(function(d) {return -1*d});
         var dates = times.map(function(d) {return new Date(d)});
 
         var intensity = {
@@ -75,24 +74,6 @@ function gettemblores() {
 
         Plotly.newPlot('Longitude', [location], layout2);
 
-        var layout3 = {
-            title: "3D coordinates of recent earthquakes in southwest Puerto Rico"
-        };
-
-        var threed = {
-            type: "scatter3d",
-            mode: "markers",
-            x: longitudes,
-            y: latitudes,
-            z: depths,
-            marker: {
-                size: magnitudes.map(function(x) {return x*2; }),
-                opacity: 0.5
-            }
-        };
-
-        Plotly.newPlot('TriDi', [threed], layout3);
     })
 }
 
-gettemblores();
