@@ -21,3 +21,14 @@ https://colab.research.google.com/drive/1pkqqWc_MhuDbDP7OpVE33JU4BKTfQGbL#scroll
 Rolando Acosta published a github repo with R code:
 
 https://github.com/RJNunez/twitter-vizs
+
+2020/01/25 - HOZ
+
+USGS turned off the CORS flag for my old query. The API page recommends
+automated applications to use the geojson feeds.
+
+The full feed for 30 days is:
+
+https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson
+
+Need to find how to narrow the list to the specified area. properties.place contains "Puerto Rico".
