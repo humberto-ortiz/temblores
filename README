@@ -24,8 +24,8 @@ https://github.com/RJNunez/twitter-vizs
 
 2020/01/25 - HOZ
 
-USGS turned off the CORS flag for my old query. The API page recommends
-automated applications to use the geojson feeds.
+I think my old query was timing out. The USGS API page recommends automated
+applications to use the geojson feeds.
 
 The full feed for 30 days is:
 
