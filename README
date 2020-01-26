@@ -31,4 +31,9 @@ The full feed for 30 days is:
 
 https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson
 
-Need to find how to narrow the list to the specified area. properties.place contains "Puerto Rico".
+Need to find how to narrow the list to the specified area. properties.place
+contains "Puerto Rico".
+
+Using code from stackoverflow to compute great circle distance:
+
+https://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
