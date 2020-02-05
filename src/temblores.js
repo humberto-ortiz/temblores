@@ -58,13 +58,14 @@ function porguanica(feature) {
 
 function gettemblores() {
     var today = new Date;
+    var begin_date = "2019-12-21";
     var end_date = today.toISOString();
-    var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
+    var url = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=17.949&longitude=-66.851&maxradiuskm=50&starttime="+begin_date+"&endtime="+end_date;
 
     //console.log(url);
 
     d3.json(url).then(function(geojson) {
-        var here = geojson.features.filter(porguanica);
+        var here = geojson.features;
 	      var magnitudes = getfield(here, "mag");
         var longitudes = getlon(here);
         var latitudes = getlat(here);
