@@ -59,7 +59,7 @@ function porguanica(feature) {
 function gettemblores() {
     var today = new Date;
     var begin_date = "2019-12-21";
-    var end_date = today.toISOString();
+    var end_date = "2020-12-31";
     var url = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=17.949&longitude=-66.851&maxradiuskm=50&starttime="+begin_date+"&endtime="+end_date;
 
     //console.log(url);
