@@ -78,7 +78,7 @@ function gettemblores() {
             x: dates,
             y: magnitudes,
             marker: {
-                size: magnitudes.map(function(x) {return x*2; })
+                size: magnitudes //.map(function(x) {return x*2; })
             }
         };
 
@@ -98,7 +98,7 @@ function gettemblores() {
             hovertext: magnitudes.map(function(mag) {return "Mag: " + mag}),
             y: longitudes,
             marker: {
-                size: magnitudes.map(function(x) {return x*2; })
+                size: magnitudes //.map(function(x) {return x*2; })
             }
         };
 
